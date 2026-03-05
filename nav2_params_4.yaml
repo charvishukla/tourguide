@@ -1,0 +1,261 @@
+# bt navigator is at the top level 
+bt_navigator:
+  ros__parameters:
+    use_sim_time: false      # since we are not using a simulation
+    global_frame: map
+    robot_base_frame: base_link
+    odom_topic: /odometry/filtered
+    bt_loop_duration: 100
+    default_server_timeout: 10000
+    wait_for_service_timeout: 10000
+    navigators: ["navigate_to_pose"]
+    navigate_to_pose:
+      plugin: "nav2_bt_navigator::NavigateToPoseNavigator"
+    error_code_name_prefixes:
+      - assisted_teleop
+      - backup
+      - compute_path
+      - dock_robot
+      - drive_on_heading
+      - follow_path
+      - nav_thru_poses
+      - nav_to_pose
+      - route
+      - spin
+      - undock_robot
+      - wait
+
+controller_server:
+  ros__parameters:
+    controller_frequency: 5.0
+    costmap_update_timeout: 1.0
+    min_x_velocity_threshold: 0.001
+    min_y_velocity_threshold: 0.001
+    min_theta_velocity_threshold: 0.001
+    failure_tolerance: 5.0
+    progress_checker_plugins: ["progress_checker"]
+    goal_checker_plugins: ["goal_checker"]
+    controller_plugins: ["FollowPath"]
+    odom_topic: /odometry/filtered
+    enable_stamped_cmd_vel: True
+    progress_checker:
+      plugin: "nav2_controller::SimpleProgressChecker"
+      required_movement_radius: 0.5
+      movement_time_allowance: 10.0
+    goal_checker:
+      plugin: "nav2_controller::SimpleGoalChecker"
+      xy_goal_tolerance: 0.25
+      yaw_goal_tolerance: 0.50
+      path_length_tolerance: 0.75
+      stateful: false
+    # PathHandler:
+    #   plugin: "nav2_controller::FeasiblePathHandler"
+    #   prune_distance: 2.0
+    #   enforce_path_inversion: True
+    #   enforce_path_rotation: False
+    #   inversion_xy_tolerance: 0.2
+    #   inversion_yaw_tolerance: 0.4
+    #   minimum_rotation_angle: 0.785
+    #   reject_unit_path: False
+    # FollowPath:
+    #   plugin: "dwb_core::DWBLocalPlanner"
+    FollowPath:
+      plugin: nav2_graceful_controller::GracefulController
+      min_lookahead: 0.25
+      max_lookahead: 1.0
+      initial_rotation: true
+      initial_rotation_threshold: 0.75
+      prefer_final_rotation: true
+      allow_backward: false
+      k_phi: 2.0
+      k_delta: 1.0
+      beta: 0.4
+      lambda: 2.0
+      v_linear_min: 0.1
+      v_linear_max: 0.5
+      v_angular_max: 5.0
+      v_angular_min_in_place: 0.25
+      slowdown_radius: 1.5
+      footprint_scaling_linear_vel: 0.5
+      footprint_scaling_factor: 0.25
+      footprint_scaling_step: 0.1
+      obstacle_cost_margin: 1
+      final_rotation_search_step: 0.1
+
+
+
+planner_server:
+  ros__parameters:
+    allow_partial_planning: true # was false before
+    expected_planner_frequency: 1.0
+    costmap_update_timeout: 3.0
+    introspection_mode: "disabled"
+    planner_plugins: ['GridBased']
+    GridBased:
+      plugin: 'nav2_navfn_planner::NavfnPlanner'
+
+
+behavior_server:
+  ros__parameters:
+    local_frame: odom
+    global_frame: map
+    robot_base_frame: base_link
+    transform_tolerance: 1.0
+    simulate_ahead_time: 2.0
+    max_rotational_vel: 0.8
+    min_rotational_vel: 0.1
+    rotational_acc_lim: 2.2
+    enable_stamped_cmd_vel: true
+    local_costmap_topic: /local_costmap/costmap_raw
+    global_costmap_topic: /global_costmap/costmap_raw
+    local_footprint_topic: /local_costmap/published_footprint
+    global_footprint_topic: /global_costmap/published_footprint
+    cycle_frequency: 10.0
+    behavior_plugins: ["spin", "backup", "drive_on_heading", "wait"] # may need to change default params for each
+    spin:
+      plugin: "nav2_behaviors::Spin"
+    backup:
+      plugin: "nav2_behaviors::BackUp"
+    drive_on_heading:
+      plugin: "nav2_behaviors::DriveOnHeading"
+    wait:
+      plugin: "nav2_behaviors::Wait"
+
+
+
+global_costmap:
+  global_costmap:
+    ros__parameters:
+      update_frequency: 1.0
+      global_frame: map
+      robot_base_frame: base_link
+      robot_radius: 0.05
+      resolution: 0.05
+      track_unknown_space: true
+      plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
+      obstacle_layer:
+        plugin: "nav2_costmap_2d::ObstacleLayer"
+        enabled: true
+        observation_sources: scan
+        footprint_clearing_enabled: true
+        max_obstacle_height: 2.0
+        min_obstacle_height: 0.0
+        combination_method: 1
+        scan: # can try /rtabmap/map's point cloud topic here
+          topic: /scan_filtered
+          obstacle_max_range: 2.0
+          obstacle_min_range: 0.0
+          raytrace_max_range: 3.0
+          raytrace_min_range: 0.1
+          clearing: true
+          marking: true
+          data_type: "LaserScan"
+          inf_is_valid: false
+      static_layer:
+        plugin: "nav2_costmap_2d::StaticLayer"
+        # map_topic: "/rtabmap/map"
+        map_subscribe_transient_local: true
+        enabled: true
+        subscribe_to_updates: false # was true
+      inflation_layer: # could be very compute intensive.   ???
+        plugin: "nav2_costmap_2d::InflationLayer"
+        enabled: true
+        inflation_radius: 0.25
+        cost_scaling_factor: 5.0
+        inflate_unknown: false
+        inflate_around_unknown: true
+      always_send_full_costmap: true
+
+
+local_costmap:
+  local_costmap:
+    ros__parameters:
+      global_frame: odom
+      robot_base_frame: base_link
+      update_frequency: 5.0
+      publish_frequency: 2.0
+      rolling_window: true
+      width: 6
+      height: 6
+      resolution: 0.05
+      introspection_mode: "disabled"
+      plugins: ["inflation_layer", "obstacle_layer"]
+      inflation_layer: # could be very compute intensive.   ???
+        plugin: "nav2_costmap_2d::InflationLayer"
+        enabled: true
+        inflation_radius: 0.25
+        cost_scaling_factor: 5.0
+        inflate_unknown: false
+        inflate_around_unknown: true
+      obstacle_layer:
+        plugin: "nav2_costmap_2d::ObstacleLayer"
+        enabled: true
+        observation_sources: scan
+        footprint_clearing_enabled: true
+        max_obstacle_height: 2.0
+        min_obstacle_height: 0.0
+        combination_method: 1
+        scan: # can try /rtabmap/map's point cloud topic here
+          topic: scan_filtered
+          obstacle_max_range: 2.0
+          obstacle_min_range: 0.0
+          raytrace_max_range: 3.0
+          raytrace_min_range: 0.1
+          clearing: true
+          marking: true
+          data_type: "LaserScan"
+          inf_is_valid: false
+
+
+collision_monitor:
+  ros__parameters:
+    enabled: false 
+    frequency: 5.0
+    enable_stamped_cmd_vel: True
+    base_frame_id: "base_link"
+    odom_frame_id: "odom"
+    cmd_vel_in_topic: "cmd_vel_smoothed"
+    cmd_vel_out_topic: "cmd_vel"
+    state_topic: "collision_monitor_state" # uhhh does this exist?
+    transform_tolerance: 1.0
+    observation_sources: ['scan'] # REQUIRED ARGUMENT
+    # Polygons represent zone around the robot for "stop", "slowdown" and "limit" action types,
+    polygons: ["FootprintApproach", "PolygonStop"]
+    FootprintApproach:
+      type: "polygon"
+      action_type: "approach"
+      footprint_topic: "/local_costmap/published_footprint"
+      time_before_collision: 1.0
+      simulation_time_step: 0.5
+      min_points: 6
+      enabled: true
+    PolygonStop:
+      type: "circle"
+      radius: 0.03
+      action_type: "stop"
+      min_points: 4
+      polygon_pub_topic: "polygon_stop"
+      enabled: True
+    scan: 
+      topic: scan_filtered
+      obstacle_max_range: 2.0
+      obstacle_min_range: 0.0
+      raytrace_max_range: 3.0
+      raytrace_min_range: 0.1
+      clearing: true
+      marking: true
+      data_type: "LaserScan"
+      inf_is_valid: false
+
+
+
+# I guess it really wants a charging dock: [opennav_docking-10] [ERROR] [1772744967.482321963] [docking_server]: Charging dock plugins not given!
+# so adding this 
+docking_server:
+  ros__parameters:
+    enable_stamped_cmd_vel: True
+    dock_plugins: ['dummy_dock']
+    dummy_dock:
+      plugin: 'opennav_docking::SimpleChargingDock'
+      use_battery_status: false
+
