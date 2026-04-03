@@ -34,7 +34,7 @@ controller_server:
     min_x_velocity_threshold: 0.001
     min_y_velocity_threshold: 0.001
     min_theta_velocity_threshold: 0.001
-    failure_tolerance: 5.0
+    failure_tolerance: 5.0        # reducing failure tolerance to 3 seconds to make it wait around less!
     progress_checker_plugins: ["progress_checker"]
     goal_checker_plugins: ["goal_checker"]
     controller_plugins: ["FollowPath"]
@@ -43,7 +43,7 @@ controller_server:
     progress_checker:
       plugin: "nav2_controller::SimpleProgressChecker"
       required_movement_radius: 0.1
-      movement_time_allowance: 10.0
+      movement_time_allowance: 10.0                # tell the progress checker to wait x amount of time before replanning (i think) 
     goal_checker:
       plugin: "nav2_controller::SimpleGoalChecker"
       xy_goal_tolerance: 0.05
@@ -53,13 +53,15 @@ controller_server:
     FollowPath:
       plugin: "dwb_core::DWBLocalPlanner"    # Back to purely DWB!
       debug_trajectory_details: true
-      min_vel_x: 0.0                       # Keeping reverse so it doesn't get permanently trapped
-      max_vel_x: 0.50
+      # min_vel_x: 0.0                       # Keeping reverse so it doesn't get permanently trapped
+      max_vel_x: 0.30
+      min_vel_x: 0.0
       max_vel_y: 0.0
       min_vel_y: 0.0
       max_vel_theta: 1.5
+      min_vel_theta: -1.5 # allow rigth turns 
       min_speed_theta: 0.0
-      min_speed_xy: 0.0
+      min_speed_xy: 0.05 #0.0
       max_speed_xy: 0.5
       acc_lim_x: 2.5
       acc_lim_y: 0.0
@@ -80,6 +82,17 @@ controller_server:
       limit_vel_cmd_in_traj: true
       stateful: true
       critics: ["RotateToGoal", "ObstacleFootprint", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
+      # RotateToGoal:
+      #   xy_goal_tolerance: 0.10
+      #   path_length_tolerance: 0.5
+      #   trans_stopped_velocity: 0.01
+      # GoalAlign.forward_point_distance: 0.325
+      # PathAlign.forward_point_distance: 0.325      
+      # ObstacleFootprint.scale: 12.0
+      # PathAlign.scale: 12.0        # High value = strict alignment to the path
+      # PathDist.scale: 12.0         # High value = strictly stay on the path
+      # GoalAlign.scale: 8.0
+      # GoalDist.scale: 8.0
       RotateToGoal:
         xy_goal_tolerance: 0.10
         path_length_tolerance: 0.5
@@ -87,25 +100,25 @@ controller_server:
       GoalAlign.forward_point_distance: 0.325
       PathAlign.forward_point_distance: 0.325      
       ObstacleFootprint.scale: 12.0
-      PathAlign.scale: 12.0        # High value = strict alignment to the path
-      PathDist.scale: 12.0         # High value = strictly stay on the path
-      GoalAlign.scale: 8.0
-      GoalDist.scale: 8.0
-
+      PathAlign.scale: 4.0        # MASSIVE increase: Force strict alignment to the path
+      PathDist.scale: 8.0         # MASSIVE increase: Force it to physically stay on the line
+      GoalAlign.scale: 12.0
+      GoalDist.scale: 4.0
 
 
 
 planner_server:
   ros__parameters:
-    allow_partial_planning: true # was false before
+    allow_partial_planning: false # was false before
     expected_planner_frequency: 1.0
     costmap_update_timeout: 3.0
     introspection_mode: "disabled"
     enable_stamped_cmd_vel: true # added this line !!!
     planner_plugins: ['GridBased']
     GridBased:
-      plugin: 'nav2_navfn_planner::NavfnPlanner'
+      plugin: 'nav2_smac_planner::SmacPlanner2D'       #'nav2_navfn_planner::NavfnPlanner'
       tolerance: 0.5 #######
+      allow_unknown: true
 
 
 behavior_server:
@@ -140,11 +153,12 @@ behavior_server:
 global_costmap:
   global_costmap:
     ros__parameters:
-      update_frequency: 1.0
+      update_frequency: 5.0      #1.0
+      transform_tolerance: 1.0
       global_frame: map
       robot_base_frame: base_link
-      robot_radius: 0.2
-      resolution: 0.05
+      robot_radius: 0.35
+      resolution: 0.1
       track_unknown_space: true
       enable_stamped_cmd_vel: true # added this line !!!
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
@@ -160,7 +174,7 @@ global_costmap:
           topic: /scan_filtered
           obstacle_max_range: 5.0
           obstacle_min_range: 0.0
-          raytrace_max_range: 3.0
+          raytrace_max_range: 5.5        #3.0
           raytrace_min_range: 0.1
           clearing: true
           marking: true
@@ -175,8 +189,8 @@ global_costmap:
       inflation_layer: # could be very compute intensive.   ???
         plugin: "nav2_costmap_2d::InflationLayer"
         enabled: true
-        inflation_radius: 0.55
-        cost_scaling_factor: 10.0
+        inflation_radius: 0.55 # was 0.40
+        cost_scaling_factor: 10.0 # was 10.0
         inflate_unknown: true
         inflate_around_unknown: true
         inflate_around_unknown: true
@@ -188,6 +202,7 @@ local_costmap:
     ros__parameters:
       global_frame: odom
       robot_base_frame: base_link
+      robot_radius: 0.35
       update_frequency: 5.0
       publish_frequency: 2.0
       rolling_window: true
@@ -200,10 +215,10 @@ local_costmap:
       inflation_layer: # could be very compute intensive.   ???
         plugin: "nav2_costmap_2d::InflationLayer"
         enabled: true
-        inflation_radius: 0.35
+        inflation_radius: 0.65
         inflate_unknown: true
         inflate_around_unknown: true
-        cost_scaling_factor: 10.0
+        cost_scaling_factor: 5.0
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: true
@@ -216,8 +231,8 @@ local_costmap:
           topic: /scan_filtered
           obstacle_max_range: 3.0
           obstacle_min_range: 0.0
-          raytrace_max_range: 3.0
-          raytrace_min_range: 0.1
+          raytrace_max_range: 5.5        #3.0
+          raytrace_min_range: 0.01
           clearing: true
           marking: true
           data_type: "LaserScan"
@@ -226,13 +241,15 @@ local_costmap:
 
 collision_monitor:
   ros__parameters:
-    enabled: false
+    enabled: true
     frequency: 5.0
     enable_stamped_cmd_vel: true
     base_frame_id: "base_link"
     odom_frame_id: "odom"
     cmd_vel_in_topic: "cmd_vel_smoothed"
     cmd_vel_out_topic: "cmd_vel"
+    # cmd_vel_in_topic: "cmd_vel_nav"
+    # cmd_vel_out_topic: "cmd_vel"
     state_topic: "collision_monitor_state" # uhhh does this exist?
     transform_tolerance: 1.0
     observation_sources: ['scan'] # REQUIRED ARGUMENT
@@ -242,13 +259,14 @@ collision_monitor:
       type: "polygon"
       action_type: "approach"
       footprint_topic: "/local_costmap/published_footprint"
-      time_before_collision: 1.0
-      simulation_time_step: 3.0
+      time_before_collision: 0.5 
+      simulation_time_step: 0.5
       min_points: 6
       enabled: true
     PolygonStop:
-      type: "circle"
-      radius: 0.55
+      type: "polygon" # "circle"
+      points: "[[0.25, 0.25], [0.25, -0.25], [0.0, -0.25], [0.0, 0.25]]" #  "[[0.15, 0.15], [0.15, -0.15], [0.0, -0.15], [0.0, 0.15]]"
+      # radius: 0.45 # 0.55
       action_type: "stop"
       min_points: 3
       polygon_pub_topic: "polygon_stop"
@@ -281,8 +299,8 @@ velocity_smoother:
     smoothing_frequency: 5.0
     scale_velocities: false
     feedback: "OPEN_LOOP"
-    max_velocity: [0.3, 0.0, 1.5]
-    min_velocity: [-0.3, 0.0, -1.5]
+    max_velocity: [0.5, 0.0, 1.5]
+    min_velocity: [-0.5, 0.0, -1.5]
     deadband_velocity: [0.0, 0.0, 0.0]
     velocity_timeout: 1.0
     max_accel: [0.5, 0.0, 1.0]

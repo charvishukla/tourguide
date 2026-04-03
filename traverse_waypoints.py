@@ -85,10 +85,10 @@ def main():
     
     # Pick one:
 #    waypoints = square(navigator, side=1.0, frame_id='odom')
-    waypoints = triangle(navigator, side=1.0, frame_id='odom')
+    # waypoints = triangle(navigator, side=1.0, frame_id='odom')
     # waypoints = zigzag(navigator, step=0.75, frame_id='map')
     # waypoints = circle(navigator, radius=1.0, num_points=16, frame_id='map')
-   # waypoints = line(navigator, frame_id='odom')
+    waypoints = line(navigator, frame_id='odom')
     navigator.followWaypoints(waypoints)
 
     while not navigator.isTaskComplete():
