@@ -8,9 +8,9 @@ from geometry_msgs.msg import PoseStamped
 from nav2_simple_commander.robot_navigator import BasicNavigator, TaskResult
 
 
-FILE_PATH = 'Desktop/tourguide/waypoints.yaml'
+FILE_PATH = 'waypoints.yaml'
 
-def make_pose(navigator, x, y, yaw_deg=0.0, frame_id='map'):
+def make_pose(navigator, x, y, yaw_deg=0.0, frame_id='odom'):
     '''
     This function can be used to specify an orientation and position for the robot. 
     Inputs:
@@ -44,7 +44,7 @@ def make_pose(navigator, x, y, yaw_deg=0.0, frame_id='map'):
 
 
 
-def load_waypoints_from_file(navigator, file_path, frame_id='odom'):
+def load_waypoints_from_file(navigator, file_path, frame_id='map'):
     '''
     Loads a list of waypoints from a specififed yaml file
     Inputs:
@@ -67,25 +67,33 @@ def main():
     rclpy.init()
     navigator = BasicNavigator()
     navigator.waitUntilNav2Active(localizer='robot_localization')                               # Wait until Nav2 is active
-    waypoints = load_waypoints_from_file(navigator, FILE_PATH, frame_id='odom')                 # Load waypoints
-    navigator.followWaypoints(waypoints)                                                        # use Nav2's followWaypoints module to navigate through the specified waypts
+    print("Loading Waypoints")
+    waypoints = load_waypoints_from_file(navigator, FILE_PATH, frame_id='map')                 # Load waypoints
+    print("Loaded Waypoints:   ", waypoints)
 
-    while not navigator.isTaskComplete():
-        feedback = navigator.getFeedback()                                                  
-        if feedback:
-            print("Following waypoints...")
+    print("----- Starting Waypoint traversal -----")
+    for i, goal_pose in enumerate(waypoints):
+        print("Current index: ", i, "               Current Goal: ", goal_pose )
+        navigator.goToPose(goal_pose)
+        # navigator.followWaypoints(waypoints)                                                        # use Nav2's followWaypoints module to navigate through the specified waypts
+        while not navigator.isTaskComplete():
+            feedback = navigator.getFeedback()                                                  
+            if feedback:
+                print(f"Navigating to Goal {i}... Distance remaining: {feedback.distance_remaining:.2f} m", end='\r')
+        
+        print("")
+        result = navigator.getResult()                                                              # grab result status 
 
-    result = navigator.getResult()                                                              # grab result status 
 
-
-    if result == TaskResult.SUCCEEDED:
-        print("Waypoints completed successfully.")
-    elif result == TaskResult.CANCELED:
-        print("Waypoint task was canceled.")
-    elif result == TaskResult.FAILED:
-        print("Waypoint task failed.")
-    else:
-        print("Unknown result.")
+        if result == TaskResult.SUCCEEDED:
+            print("Waypoints completed successfully.")
+        elif result == TaskResult.CANCELED:
+            print("Waypoint task was canceled.")
+        elif result == TaskResult.FAILED:
+            print("Waypoint task failed. Waypoint index: ", i, "Current waypoinr goal: ", goal_pose)
+            break
+        else:
+            print("Unknown result.")
 
     rclpy.shutdown()                                                                            # shut the nodes
 
