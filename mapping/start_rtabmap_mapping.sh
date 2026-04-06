@@ -8,8 +8,25 @@ echo "   STARTING RTAB-MAP (Background)         "
 echo "=========================================="
 
 # Launch RTAB-Map
+# ros2 launch rtabmap_launch rtabmap.launch.py \
+#     rtabmap_args:="--delete_db_on_start" \
+#     rtabmap_viz:=false \
+#     visual_odometry:=false \
+#     frame_id:=base_link \
+#     odom_topic:=/odometry/filtered \
+#     subscribe_rgb:=true \
+#     rgb_topic:=/oak/rgb/image_raw \
+#     camera_info_topic:=/oak/rgb/camera_info \
+#     subscribe_depth:=true \
+#     depth_topic:=/oak/stereo/image_raw \
+#     subscribe_scan:=true \
+#     scan_topic:=/scan_filtered \
+#     approx_sync:=true \
+#     qos:=2 \
+#     queue_size:=20 > /dev/null 2>&1 &
+
 ros2 launch rtabmap_launch rtabmap.launch.py \
-    rtabmap_args:="--delete_db_on_start" \
+    rtabmap_args:="--delete_db_on_start --RGBD/LinearUpdate 0.25 --RGBD/AngularUpdate 0.25 --Rtabmap/DetectionRate 0.5 --Kp/MaxFeatures 400 --Mem/ImagePreDecimation 2" \
     rtabmap_viz:=false \
     visual_odometry:=false \
     frame_id:=base_link \
