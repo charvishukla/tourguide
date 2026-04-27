@@ -1,0 +1,58 @@
+[0.000000] (-) TimerEvent: {}
+[0.000268] (tourguide_bringup) JobQueued: {'identifier': 'tourguide_bringup', 'dependencies': OrderedDict()}
+[0.000765] (tourguide_bringup) JobStarted: {'identifier': 'tourguide_bringup'}
+[0.099695] (-) TimerEvent: {}
+[0.200078] (-) TimerEvent: {}
+[0.300408] (-) TimerEvent: {}
+[0.400722] (-) TimerEvent: {}
+[0.501102] (-) TimerEvent: {}
+[0.601499] (-) TimerEvent: {}
+[0.701813] (-) TimerEvent: {}
+[0.802122] (-) TimerEvent: {}
+[0.902501] (-) TimerEvent: {}
+[1.002838] (-) TimerEvent: {}
+[1.103157] (-) TimerEvent: {}
+[1.203522] (-) TimerEvent: {}
+[1.303850] (-) TimerEvent: {}
+[1.404152] (-) TimerEvent: {}
+[1.504466] (-) TimerEvent: {}
+[1.604791] (-) TimerEvent: {}
+[1.705321] (-) TimerEvent: {}
+[1.721735] (tourguide_bringup) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/husarion/Desktop/tourguide/build/tourguide_bringup/build', '--no-deps', 'symlink_data'], 'cwd': '/home/husarion/Desktop/tourguide/build/tourguide_bringup', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'husarion', 'SSH_CLIENT': '100.64.1.92 52897 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/husarion/.vscode-server/cli/servers/Stable-41dd792b5e652393e7787322889ed5fdc58bd75b/server/bin/helpers/browser.sh', 'HOME': '/home/husarion', 'OLDPWD': '/home/husarion/Desktop/tourguide/src/tourguide_bringup', 'TERM_PROGRAM_VERSION': '1.115.0', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-38bce684-915b-4941-b3da-469825b76dcf.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'SBC_NAME_FANCY': 'Raspberry Pi', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'husarion', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'SBC_NAME': 'RPI', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '2', 'HUSARION_OS_VERSION': 'husarion-ros2-jazzy-rpi-2025-07-29', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/husarion/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/husarion/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/husarion/.vscode-server/cli/servers/Stable-41dd792b5e652393e7787322889ed5fdc58bd75b/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/var/snap/rosbot/common/dds-config-udp-lo.xml', 'XDG_RUNTIME_DIR': '/run/user/1002', 'LANG': 'C.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-216e867c4d.sock', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IMAGE_TYPE': 'ROS2_JAZZY', 'PWD': '/home/husarion/Desktop/tourguide/build/tourguide_bringup', 'SSH_CONNECTION': '100.64.1.92 52897 128.54.52.222 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/husarion/Desktop/tourguide/build/tourguide_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[1.805413] (-) TimerEvent: {}
+[1.905814] (-) TimerEvent: {}
+[2.006121] (-) TimerEvent: {}
+[2.106448] (-) TimerEvent: {}
+[2.206943] (-) TimerEvent: {}
+[2.215229] (tourguide_bringup) StdoutLine: {'line': b'running develop\n'}
+[2.307065] (-) TimerEvent: {}
+[2.407556] (-) TimerEvent: {}
+[2.507986] (-) TimerEvent: {}
+[2.517284] (tourguide_bringup) StdoutLine: {'line': b'running egg_info\n'}
+[2.518283] (tourguide_bringup) StdoutLine: {'line': b'creating tourguide_bringup.egg-info\n'}
+[2.544505] (tourguide_bringup) StdoutLine: {'line': b'writing tourguide_bringup.egg-info/PKG-INFO\n'}
+[2.544938] (tourguide_bringup) StdoutLine: {'line': b'writing dependency_links to tourguide_bringup.egg-info/dependency_links.txt\n'}
+[2.545198] (tourguide_bringup) StdoutLine: {'line': b'writing requirements to tourguide_bringup.egg-info/requires.txt\n'}
+[2.545370] (tourguide_bringup) StdoutLine: {'line': b'writing top-level names to tourguide_bringup.egg-info/top_level.txt\n'}
+[2.545545] (tourguide_bringup) StdoutLine: {'line': b"writing manifest file 'tourguide_bringup.egg-info/SOURCES.txt'\n"}
+[2.600527] (tourguide_bringup) StdoutLine: {'line': b"reading manifest file 'tourguide_bringup.egg-info/SOURCES.txt'\n"}
+[2.601396] (tourguide_bringup) StdoutLine: {'line': b"writing manifest file 'tourguide_bringup.egg-info/SOURCES.txt'\n"}
+[2.608080] (-) TimerEvent: {}
+[2.630252] (tourguide_bringup) StdoutLine: {'line': b'running build_ext\n'}
+[2.631295] (tourguide_bringup) StdoutLine: {'line': b'Creating /home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages/tourguide-bringup.egg-link (link to .)\n'}
+[2.632125] (tourguide_bringup) StdoutLine: {'line': b'\n'}
+[2.632288] (tourguide_bringup) StdoutLine: {'line': b'Installed /home/husarion/Desktop/tourguide/build/tourguide_bringup\n'}
+[2.632424] (tourguide_bringup) StdoutLine: {'line': b'running symlink_data\n'}
+[2.632608] (tourguide_bringup) StdoutLine: {'line': b'creating /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/ament_index\n'}
+[2.632724] (tourguide_bringup) StdoutLine: {'line': b'creating /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/ament_index/resource_index\n'}
+[2.632816] (tourguide_bringup) StdoutLine: {'line': b'creating /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/ament_index/resource_index/packages\n'}
+[2.632915] (tourguide_bringup) StdoutLine: {'line': b'symbolically linking /home/husarion/Desktop/tourguide/build/tourguide_bringup/resource/tourguide_bringup -> /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/ament_index/resource_index/packages\n'}
+[2.633057] (tourguide_bringup) StdoutLine: {'line': b'symbolically linking /home/husarion/Desktop/tourguide/build/tourguide_bringup/package.xml -> /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup\n'}
+[2.633337] (tourguide_bringup) StdoutLine: {'line': b'creating /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/launch\n'}
+[2.633535] (tourguide_bringup) StdoutLine: {'line': b'symbolically linking /home/husarion/Desktop/tourguide/build/tourguide_bringup/launch/vision.launch.py -> /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/launch\n'}
+[2.633652] (tourguide_bringup) StdoutLine: {'line': b'creating /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/config\n'}
+[2.633751] (tourguide_bringup) StdoutLine: {'line': b'symbolically linking /home/husarion/Desktop/tourguide/build/tourguide_bringup/config/apriltags.yaml -> /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/config\n'}
+[2.708232] (-) TimerEvent: {}
+[2.742163] (tourguide_bringup) CommandEnded: {'returncode': 0}
+[2.767427] (tourguide_bringup) JobEnded: {'identifier': 'tourguide_bringup', 'rc': 0}
+[2.768592] (-) EventReactorShutdown: {}

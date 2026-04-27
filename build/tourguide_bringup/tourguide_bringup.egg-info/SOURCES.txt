@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+config/apriltags.yaml
+launch/vision.launch.py
+resource/tourguide_bringup
+tourguide_bringup/__init__.py
+tourguide_bringup.egg-info/PKG-INFO
+tourguide_bringup.egg-info/SOURCES.txt
+tourguide_bringup.egg-info/dependency_links.txt
+tourguide_bringup.egg-info/requires.txt
+tourguide_bringup.egg-info/top_level.txt
+tourguide_bringup.egg-info/zip-safe
