@@ -26,7 +26,7 @@ echo "=========================================="
 #     queue_size:=20 > /dev/null 2>&1 &
 
 ros2 launch rtabmap_launch rtabmap.launch.py \
-    rtabmap_args:="--delete_db_on_start --RGBD/LinearUpdate 0.25 --RGBD/AngularUpdate 0.25 --Rtabmap/DetectionRate 0.5 --Kp/MaxFeatures 400 --Mem/ImagePreDecimation 2" \
+    rtabmap_args:="--delete_db_on_start --RGBD/LinearUpdate 0.25 --RGBD/AngularUpdate 0.25 --Rtabmap/DetectionRate 0.5 --Kp/MaxFeatures 400 --Mem/ImagePreDecimation 2 --Marker/VarianceLinear 0.0001 --Marker/VarianceAngular 9999.0" \
     rtabmap_viz:=false \
     visual_odometry:=false \
     frame_id:=base_link \
@@ -40,7 +40,9 @@ ros2 launch rtabmap_launch rtabmap.launch.py \
     scan_topic:=/scan_filtered \
     approx_sync:=true \
     qos:=2 \
+    tag_topic:=/detections \
     queue_size:=20 > /dev/null 2>&1 &
+
 
 MAPPING_PID=$!
 echo "Mapping running (PID $MAPPING_PID)."
@@ -49,3 +51,5 @@ echo "Press Ctrl+C here to save the map and stop."
 
 # Wait forever until user presses Ctrl+C
 wait $MAPPING_PID
+
+

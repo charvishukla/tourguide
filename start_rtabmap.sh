@@ -5,6 +5,7 @@ echo "🗺️  Starting RTAB-Map in Localization Mode..."
 echo "Loading map from: ~/.ros/rtabmap.db"
 echo "--------------------------------------------------------"
 
+
 ros2 launch rtabmap_launch rtabmap.launch.py \
   map_topic:="/map" \
   rtabmap_args:="--Mem/IncrementalMemory false --Mem/InitWMWithAllNodes true --Grid/FromDepth true" \
@@ -18,6 +19,7 @@ ros2 launch rtabmap_launch rtabmap.launch.py \
   depth_topic:="/oak/stereo/image_raw" \
   visual_odometry:=false \
   odom_topic:="/odometry/filtered" \
+  tag_topic:=/detections \
   qos_image:=2 \
   qos_depth:=2 \
   wait_for_transform:=1.4 \
