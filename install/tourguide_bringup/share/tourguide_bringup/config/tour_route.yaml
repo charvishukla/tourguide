@@ -1,1 +1,5 @@
-/home/husarion/Desktop/tourguide/build/tourguide_bringup/config/tour_route.yaml
+route:
+  - 'tag_3'
+  - 'tag_4'
+  - 'tag_2'
+  - 'tag_1'

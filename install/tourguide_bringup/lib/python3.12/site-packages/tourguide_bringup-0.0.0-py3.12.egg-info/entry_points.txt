@@ -1,0 +1,2 @@
+[console_scripts]
+tour_script = tourguide_bringup.tour_script:main

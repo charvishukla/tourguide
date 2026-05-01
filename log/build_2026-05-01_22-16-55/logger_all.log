@@ -1,0 +1,144 @@
+[0.355s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'tourguide_bringup']
+[0.355s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['tourguide_bringup'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffb12fde50>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffb1593f80>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffb1593f80>>)
+[0.476s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.476s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.476s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.476s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.476s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.477s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.477s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/husarion/Desktop/tourguide'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(mapping) by extensions ['ignore', 'ignore_ament_install']
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(mapping) by extension 'ignore'
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(mapping) by extension 'ignore_ament_install'
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(mapping) by extensions ['colcon_pkg']
+[0.554s] Level 1:colcon.colcon_core.package_identification:_identify(mapping) by extension 'colcon_pkg'
+[0.554s] Level 1:colcon.colcon_core.package_identification:_identify(mapping) by extensions ['colcon_meta']
+[0.554s] Level 1:colcon.colcon_core.package_identification:_identify(mapping) by extension 'colcon_meta'
+[0.554s] Level 1:colcon.colcon_core.package_identification:_identify(mapping) by extensions ['ros']
+[0.554s] Level 1:colcon.colcon_core.package_identification:_identify(mapping) by extension 'ros'
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(mapping) by extensions ['cmake', 'python']
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(mapping) by extension 'cmake'
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(mapping) by extension 'python'
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(mapping) by extensions ['python_setup_py']
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(mapping) by extension 'python_setup_py'
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.557s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.557s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.557s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.557s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src/tourguide_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src/tourguide_bringup) by extension 'ignore'
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src/tourguide_bringup) by extension 'ignore_ament_install'
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src/tourguide_bringup) by extensions ['colcon_pkg']
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src/tourguide_bringup) by extension 'colcon_pkg'
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src/tourguide_bringup) by extensions ['colcon_meta']
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(src/tourguide_bringup) by extension 'colcon_meta'
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(src/tourguide_bringup) by extensions ['ros']
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(src/tourguide_bringup) by extension 'ros'
+[0.566s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tourguide_bringup' with type 'ros.ament_python' and name 'tourguide_bringup'
+[0.566s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.566s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.566s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.566s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.566s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.617s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.618s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.623s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/husarion/Desktop/tourguide/install
+[0.626s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 431 installed packages in /opt/ros/jazzy
+[0.630s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'tourguide_bringup' build argument 'cmake_args' from command line to 'None'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'tourguide_bringup' build argument 'cmake_target' from command line to 'None'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'tourguide_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'tourguide_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'tourguide_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.778s] Level 5:colcon.colcon_core.verb:set package 'tourguide_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.778s] Level 5:colcon.colcon_core.verb:set package 'tourguide_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.778s] Level 5:colcon.colcon_core.verb:set package 'tourguide_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.778s] Level 5:colcon.colcon_core.verb:set package 'tourguide_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.778s] DEBUG:colcon.colcon_core.verb:Building package 'tourguide_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/husarion/Desktop/tourguide/build/tourguide_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/husarion/Desktop/tourguide/install/tourguide_bringup', 'merge_install': False, 'path': '/home/husarion/Desktop/tourguide/src/tourguide_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.778s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.779s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.780s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/husarion/Desktop/tourguide/src/tourguide_bringup' with build type 'ament_python'
+[0.780s] Level 1:colcon.colcon_core.shell:create_environment_hook('tourguide_bringup', 'ament_prefix_path')
+[0.784s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.784s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/hook/ament_prefix_path.ps1'
+[0.786s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/hook/ament_prefix_path.dsv'
+[0.789s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/hook/ament_prefix_path.sh'
+[0.790s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.790s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.483s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/husarion/Desktop/tourguide/src/tourguide_bringup'
+[1.483s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.483s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.455s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/husarion/Desktop/tourguide/build/tourguide_bringup': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/build/tourguide_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/husarion/Desktop/tourguide/build/tourguide_bringup/build
+[5.258s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/husarion/Desktop/tourguide/build/tourguide_bringup' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/build/tourguide_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/husarion/Desktop/tourguide/build/tourguide_bringup/build
+[5.260s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/husarion/Desktop/tourguide/src/tourguide_bringup': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/build/tourguide_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tourguide_bringup build --build-base /home/husarion/Desktop/tourguide/build/tourguide_bringup/build install --record /home/husarion/Desktop/tourguide/build/tourguide_bringup/install.log --single-version-externally-managed install_data --force
+[7.184s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/husarion/Desktop/tourguide/src/tourguide_bringup' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/build/tourguide_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tourguide_bringup build --build-base /home/husarion/Desktop/tourguide/build/tourguide_bringup/build install --record /home/husarion/Desktop/tourguide/build/tourguide_bringup/install.log --single-version-externally-managed install_data --force
+[7.191s] Level 1:colcon.colcon_core.environment:checking '/home/husarion/Desktop/tourguide/install/tourguide_bringup' for CMake module files
+[7.192s] Level 1:colcon.colcon_core.environment:checking '/home/husarion/Desktop/tourguide/install/tourguide_bringup' for CMake config files
+[7.195s] Level 1:colcon.colcon_core.environment:checking '/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib'
+[7.195s] Level 1:colcon.colcon_core.environment:checking '/home/husarion/Desktop/tourguide/install/tourguide_bringup/bin'
+[7.196s] Level 1:colcon.colcon_core.environment:checking '/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/pkgconfig/tourguide_bringup.pc'
+[7.196s] Level 1:colcon.colcon_core.environment:checking '/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages'
+[7.197s] Level 1:colcon.colcon_core.shell:create_environment_hook('tourguide_bringup', 'pythonpath')
+[7.197s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/hook/pythonpath.ps1'
+[7.198s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/hook/pythonpath.dsv'
+[7.202s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/hook/pythonpath.sh'
+[7.204s] Level 1:colcon.colcon_core.environment:checking '/home/husarion/Desktop/tourguide/install/tourguide_bringup/bin'
+[7.205s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tourguide_bringup)
+[7.206s] INFO:colcon.colcon_core.shell:Creating package script '/home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/package.ps1'
+[7.209s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/package.dsv'
+[7.211s] INFO:colcon.colcon_core.shell:Creating package script '/home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/package.sh'
+[7.214s] INFO:colcon.colcon_core.shell:Creating package script '/home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/package.bash'
+[7.216s] INFO:colcon.colcon_core.shell:Creating package script '/home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/package.zsh'
+[7.218s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/husarion/Desktop/tourguide/install/tourguide_bringup/share/colcon-core/packages/tourguide_bringup)
+[7.220s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[7.221s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[7.221s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[7.221s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[7.238s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[7.238s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.238s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[7.240s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[7.240s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[7.242s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/husarion/Desktop/tourguide/install/local_setup.ps1'
+[7.245s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/husarion/Desktop/tourguide/install/_local_setup_util_ps1.py'
+[7.247s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/husarion/Desktop/tourguide/install/setup.ps1'
+[7.250s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/husarion/Desktop/tourguide/install/local_setup.sh'
+[7.252s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/husarion/Desktop/tourguide/install/_local_setup_util_sh.py'
+[7.254s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/husarion/Desktop/tourguide/install/setup.sh'
+[7.258s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/husarion/Desktop/tourguide/install/local_setup.bash'
+[7.260s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/husarion/Desktop/tourguide/install/setup.bash'
+[7.266s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/husarion/Desktop/tourguide/install/local_setup.zsh'
+[7.269s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/husarion/Desktop/tourguide/install/setup.zsh'

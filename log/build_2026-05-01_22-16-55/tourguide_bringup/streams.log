@@ -1,0 +1,40 @@
+[2.675s] Invoking command in '/home/husarion/Desktop/tourguide/build/tourguide_bringup': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/build/tourguide_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/husarion/Desktop/tourguide/build/tourguide_bringup/build
+[3.604s] running develop
+[4.265s] Removing /home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages/tourguide-bringup.egg-link (link to .)
+[4.478s] Invoked command in '/home/husarion/Desktop/tourguide/build/tourguide_bringup' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/build/tourguide_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/husarion/Desktop/tourguide/build/tourguide_bringup/build
+[4.479s] Invoking command in '/home/husarion/Desktop/tourguide/src/tourguide_bringup': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/build/tourguide_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tourguide_bringup build --build-base /home/husarion/Desktop/tourguide/build/tourguide_bringup/build install --record /home/husarion/Desktop/tourguide/build/tourguide_bringup/install.log --single-version-externally-managed install_data --force
+[5.340s] running egg_info
+[5.415s] writing ../../build/tourguide_bringup/tourguide_bringup.egg-info/PKG-INFO
+[5.416s] writing dependency_links to ../../build/tourguide_bringup/tourguide_bringup.egg-info/dependency_links.txt
+[5.419s] writing entry points to ../../build/tourguide_bringup/tourguide_bringup.egg-info/entry_points.txt
+[5.419s] writing requirements to ../../build/tourguide_bringup/tourguide_bringup.egg-info/requires.txt
+[5.419s] writing top-level names to ../../build/tourguide_bringup/tourguide_bringup.egg-info/top_level.txt
+[5.570s] reading manifest file '../../build/tourguide_bringup/tourguide_bringup.egg-info/SOURCES.txt'
+[5.572s] writing manifest file '../../build/tourguide_bringup/tourguide_bringup.egg-info/SOURCES.txt'
+[5.575s] running build
+[5.575s] running build_py
+[5.577s] creating /home/husarion/Desktop/tourguide/build/tourguide_bringup/build
+[5.577s] creating /home/husarion/Desktop/tourguide/build/tourguide_bringup/build/lib
+[5.577s] creating /home/husarion/Desktop/tourguide/build/tourguide_bringup/build/lib/tourguide_bringup
+[5.577s] copying tourguide_bringup/__init__.py -> /home/husarion/Desktop/tourguide/build/tourguide_bringup/build/lib/tourguide_bringup
+[5.578s] copying tourguide_bringup/tour_script.py -> /home/husarion/Desktop/tourguide/build/tourguide_bringup/build/lib/tourguide_bringup
+[5.578s] running install
+[5.586s] running install_lib
+[5.644s] creating /home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages/tourguide_bringup
+[5.645s] copying /home/husarion/Desktop/tourguide/build/tourguide_bringup/build/lib/tourguide_bringup/__init__.py -> /home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages/tourguide_bringup
+[5.645s] copying /home/husarion/Desktop/tourguide/build/tourguide_bringup/build/lib/tourguide_bringup/tour_script.py -> /home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages/tourguide_bringup
+[5.645s] byte-compiling /home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages/tourguide_bringup/__init__.py to __init__.cpython-312.pyc
+[5.645s] byte-compiling /home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages/tourguide_bringup/tour_script.py to tour_script.cpython-312.pyc
+[5.659s] running install_data
+[5.660s] copying resource/tourguide_bringup -> /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/ament_index/resource_index/packages
+[5.661s] copying package.xml -> /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup
+[5.669s] copying launch/vision.launch.py -> /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/launch
+[5.669s] copying config/apriltags.yaml -> /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/config
+[5.669s] copying config/tour_waypoints.yaml -> /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/config
+[5.669s] copying config/tour_route.yaml -> /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/config
+[5.669s] running install_egg_info
+[5.712s] Copying ../../build/tourguide_bringup/tourguide_bringup.egg-info to /home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages/tourguide_bringup-0.0.0-py3.12.egg-info
+[5.718s] running install_scripts
+[6.205s] Installing tour_script script to /home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/tourguide_bringup
+[6.206s] writing list of installed files to '/home/husarion/Desktop/tourguide/build/tourguide_bringup/install.log'
+[6.404s] Invoked command in '/home/husarion/Desktop/tourguide/src/tourguide_bringup' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/build/tourguide_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tourguide_bringup build --build-base /home/husarion/Desktop/tourguide/build/tourguide_bringup/build install --record /home/husarion/Desktop/tourguide/build/tourguide_bringup/install.log --single-version-externally-managed install_data --force
