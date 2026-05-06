@@ -15,7 +15,7 @@ def generate_launch_description():
         executable='apriltag_node',
         name='apriltag_node',
         remappings=[
-            ('image_rect', '/oak/left/image_raw'), 
+            ('image_rect', '/oak/rgb/image_raw'),               # switching this back to RGB. rtabmap and this node can share 
             ('camera_info', '/oak/left/camera_info'),
             ('detections', '/detections'),
         ],
