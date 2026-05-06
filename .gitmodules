@@ -1,0 +1,3 @@
+[submodule "src/reachy_mini_conversation_app"]
+	path = src/reachy_mini_conversation_app
+	url = https://github.com/charvishukla/reachy_mini_conversation_app.git
