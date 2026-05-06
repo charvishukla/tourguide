@@ -1,2 +1,4 @@
 [console_scripts]
+conversation_service = reachy_mini_conversation_app.main:main
+semantic_bridge = tourguide_bringup.semantic_bridge:main
 tour_script = tourguide_bringup.tour_script:main

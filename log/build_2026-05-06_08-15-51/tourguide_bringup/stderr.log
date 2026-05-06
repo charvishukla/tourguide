@@ -1,0 +1,5 @@
+  File "/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages/tourguide_bringup/tour_script.py", line 14
+    def  (x, y, z, qx, qy, qz, qw, offset_distance=1.0):
+         ^
+SyntaxError: invalid syntax
+

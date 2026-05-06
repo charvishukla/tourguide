@@ -1,7 +1,1 @@
-apriltag:
-    ros__parameters:
-        image_transport: raw 
-        family: 36h11
-        size: 0.05
-        max_hamming: 0      # max correction 0 is strict
-
+/home/husarion/Desktop/tourguide/build/tourguide_bringup/config/apriltags.yaml

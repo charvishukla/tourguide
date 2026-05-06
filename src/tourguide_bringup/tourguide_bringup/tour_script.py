@@ -11,7 +11,7 @@ from ament_index_python.packages import get_package_share_directory
 import math
 
 
-def  (x, y, z, qx, qy, qz, qw, offset_distance=1.0):
+def get_offset_pose(x, y, z, qx, qy, qz, qw, offset_distance=1.0):
     # z-axis direction vector 
     z_axis_x = 2.0 * (qx * qz + qy * qw)
     z_axis_y = 2.0 * (qy * qz - qx * qw)

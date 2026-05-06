@@ -29,7 +29,9 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'tour_script = tourguide_bringup.tour_script:main'
+            'tour_script = tourguide_bringup.tour_script:main',
+            'semantic_bridge = tourguide_bringup.semantic_bridge:main', 
+            'conversation_service = reachy_mini_conversation_app.main:main'
         ],
     },
 )

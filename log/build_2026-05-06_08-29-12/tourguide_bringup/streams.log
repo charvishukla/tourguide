@@ -1,0 +1,24 @@
+[2.043s] Invoking command in '/home/husarion/Desktop/tourguide/src/tourguide_bringup': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/build/tourguide_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tourguide_bringup build --build-base /home/husarion/Desktop/tourguide/build/tourguide_bringup/build install --record /home/husarion/Desktop/tourguide/build/tourguide_bringup/install.log --single-version-externally-managed install_data
+[2.588s] running egg_info
+[2.618s] writing ../../build/tourguide_bringup/tourguide_bringup.egg-info/PKG-INFO
+[2.619s] writing dependency_links to ../../build/tourguide_bringup/tourguide_bringup.egg-info/dependency_links.txt
+[2.626s] writing entry points to ../../build/tourguide_bringup/tourguide_bringup.egg-info/entry_points.txt
+[2.626s] writing requirements to ../../build/tourguide_bringup/tourguide_bringup.egg-info/requires.txt
+[2.626s] writing top-level names to ../../build/tourguide_bringup/tourguide_bringup.egg-info/top_level.txt
+[2.718s] reading manifest file '../../build/tourguide_bringup/tourguide_bringup.egg-info/SOURCES.txt'
+[2.722s] writing manifest file '../../build/tourguide_bringup/tourguide_bringup.egg-info/SOURCES.txt'
+[2.723s] running build
+[2.723s] running build_py
+[2.723s] running install
+[2.734s] running install_lib
+[2.773s] running install_data
+[2.774s] copying launch/mapping.launch.py -> /home/husarion/Desktop/tourguide/install/tourguide_bringup/share/tourguide_bringup/launch
+[2.775s] running install_egg_info
+[2.818s] removing '/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages/tourguide_bringup-0.0.0-py3.12.egg-info' (and everything under it)
+[2.820s] Copying ../../build/tourguide_bringup/tourguide_bringup.egg-info to /home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages/tourguide_bringup-0.0.0-py3.12.egg-info
+[2.821s] running install_scripts
+[3.118s] Installing conversation_service script to /home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/tourguide_bringup
+[3.118s] Installing semantic_bridge script to /home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/tourguide_bringup
+[3.123s] Installing tour_script script to /home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/tourguide_bringup
+[3.130s] writing list of installed files to '/home/husarion/Desktop/tourguide/build/tourguide_bringup/install.log'
+[3.249s] Invoked command in '/home/husarion/Desktop/tourguide/src/tourguide_bringup' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/build/tourguide_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tourguide_bringup build --build-base /home/husarion/Desktop/tourguide/build/tourguide_bringup/build install --record /home/husarion/Desktop/tourguide/build/tourguide_bringup/install.log --single-version-externally-managed install_data
