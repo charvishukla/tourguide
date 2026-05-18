@@ -1,0 +1,22 @@
+# ROS2 Nav2 waypoints for the tourguide robot.
+# theta is in radians. Replace x/y/theta values with your actual Nav2 map coordinates.
+home:
+  x: 0.0
+  y: 0.0
+  theta: 0.0
+
+lobby:
+  x: 2.5
+  y: 0.0
+  theta: 0.0
+
+demo_lab:
+  x: 5.1
+  y: -1.2
+  theta: 1.5708
+
+main_hall:
+  x: 8.3
+  y: 1.0
+  theta: 3.1416
+
