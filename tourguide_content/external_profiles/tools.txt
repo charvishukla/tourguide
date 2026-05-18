@@ -1,0 +1,21 @@
+# This file is an explicit allow-list.
+# Every tool name listed below must be either:
+# - a built-in tool from src/reachy_mini_conversation_app/tools/
+# - or an external tool file in TOOLS_DIRECTORY (e.g. external_tools/<name>.py)
+
+# Core movement tools
+dance
+stop_dance
+play_emotion
+stop_emotion
+move_head
+
+# Greeting tool (plays excited emotion on hello)
+tourguide_temp_tool
+
+# Tour navigation tools
+start_tour
+next_exhibit
+get_tour_status
+end_tour
+check_navigation
