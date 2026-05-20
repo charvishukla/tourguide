@@ -1,0 +1,37 @@
+[1.597s] Invoking command in '/home/husarion/Desktop/tourguide/src/tourguide_navigation': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/src/tourguide_navigation/build/tourguide_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/src/tourguide_navigation/install/tourguide_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/tourguide_navigation build --build-base /home/husarion/Desktop/tourguide/src/tourguide_navigation/build/tourguide_navigation/build install --record /home/husarion/Desktop/tourguide/src/tourguide_navigation/build/tourguide_navigation/install.log --single-version-externally-managed install_data
+[2.001s] running egg_info
+[2.002s] creating build/tourguide_navigation/tourguide_navigation.egg-info
+[2.030s] writing build/tourguide_navigation/tourguide_navigation.egg-info/PKG-INFO
+[2.030s] writing dependency_links to build/tourguide_navigation/tourguide_navigation.egg-info/dependency_links.txt
+[2.030s] writing entry points to build/tourguide_navigation/tourguide_navigation.egg-info/entry_points.txt
+[2.030s] writing requirements to build/tourguide_navigation/tourguide_navigation.egg-info/requires.txt
+[2.031s] writing top-level names to build/tourguide_navigation/tourguide_navigation.egg-info/top_level.txt
+[2.031s] writing manifest file 'build/tourguide_navigation/tourguide_navigation.egg-info/SOURCES.txt'
+[2.089s] reading manifest file 'build/tourguide_navigation/tourguide_navigation.egg-info/SOURCES.txt'
+[2.089s] writing manifest file 'build/tourguide_navigation/tourguide_navigation.egg-info/SOURCES.txt'
+[2.090s] running build
+[2.090s] running build_py
+[2.090s] creating /home/husarion/Desktop/tourguide/src/tourguide_navigation/build/tourguide_navigation/build
+[2.090s] creating /home/husarion/Desktop/tourguide/src/tourguide_navigation/build/tourguide_navigation/build/lib
+[2.090s] creating /home/husarion/Desktop/tourguide/src/tourguide_navigation/build/tourguide_navigation/build/lib/tourguide_navigation
+[2.090s] copying tourguide_navigation/__init__.py -> /home/husarion/Desktop/tourguide/src/tourguide_navigation/build/tourguide_navigation/build/lib/tourguide_navigation
+[2.091s] copying tourguide_navigation/ros2_nav_bridge.py -> /home/husarion/Desktop/tourguide/src/tourguide_navigation/build/tourguide_navigation/build/lib/tourguide_navigation
+[2.091s] running install
+[2.101s] running install_lib
+[2.130s] creating /home/husarion/Desktop/tourguide/src/tourguide_navigation/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation
+[2.130s] copying /home/husarion/Desktop/tourguide/src/tourguide_navigation/build/tourguide_navigation/build/lib/tourguide_navigation/__init__.py -> /home/husarion/Desktop/tourguide/src/tourguide_navigation/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation
+[2.130s] copying /home/husarion/Desktop/tourguide/src/tourguide_navigation/build/tourguide_navigation/build/lib/tourguide_navigation/ros2_nav_bridge.py -> /home/husarion/Desktop/tourguide/src/tourguide_navigation/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation
+[2.131s] byte-compiling /home/husarion/Desktop/tourguide/src/tourguide_navigation/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation/__init__.py to __init__.cpython-312.pyc
+[2.132s] byte-compiling /home/husarion/Desktop/tourguide/src/tourguide_navigation/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation/ros2_nav_bridge.py to ros2_nav_bridge.cpython-312.pyc
+[2.137s] running install_data
+[2.138s] creating /home/husarion/Desktop/tourguide/src/tourguide_navigation/install/tourguide_navigation/share/ament_index
+[2.138s] creating /home/husarion/Desktop/tourguide/src/tourguide_navigation/install/tourguide_navigation/share/ament_index/resource_index
+[2.138s] creating /home/husarion/Desktop/tourguide/src/tourguide_navigation/install/tourguide_navigation/share/ament_index/resource_index/packages
+[2.138s] copying resource/tourguide_navigation -> /home/husarion/Desktop/tourguide/src/tourguide_navigation/install/tourguide_navigation/share/ament_index/resource_index/packages
+[2.138s] copying package.xml -> /home/husarion/Desktop/tourguide/src/tourguide_navigation/install/tourguide_navigation/share/tourguide_navigation
+[2.138s] running install_egg_info
+[2.169s] Copying build/tourguide_navigation/tourguide_navigation.egg-info to /home/husarion/Desktop/tourguide/src/tourguide_navigation/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation-0.0.0-py3.12.egg-info
+[2.171s] running install_scripts
+[2.372s] Installing ros2_nav_bridge script to /home/husarion/Desktop/tourguide/src/tourguide_navigation/install/tourguide_navigation/lib/tourguide_navigation
+[2.372s] writing list of installed files to '/home/husarion/Desktop/tourguide/src/tourguide_navigation/build/tourguide_navigation/install.log'
+[2.470s] Invoked command in '/home/husarion/Desktop/tourguide/src/tourguide_navigation' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/src/tourguide_navigation/build/tourguide_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/src/tourguide_navigation/install/tourguide_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/tourguide_navigation build --build-base /home/husarion/Desktop/tourguide/src/tourguide_navigation/build/tourguide_navigation/build install --record /home/husarion/Desktop/tourguide/src/tourguide_navigation/build/tourguide_navigation/install.log --single-version-externally-managed install_data
