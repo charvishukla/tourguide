@@ -1,0 +1,41 @@
+[1.773s] Invoking command in '/home/husarion/Desktop/tourguide/src/tourguide_navigation': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/src/build/tourguide_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/src/install/tourguide_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/tourguide_navigation build --build-base /home/husarion/Desktop/tourguide/src/build/tourguide_navigation/build install --record /home/husarion/Desktop/tourguide/src/build/tourguide_navigation/install.log --single-version-externally-managed install_data
+[2.198s] running egg_info
+[2.199s] creating ../build/tourguide_navigation/tourguide_navigation.egg-info
+[2.230s] writing ../build/tourguide_navigation/tourguide_navigation.egg-info/PKG-INFO
+[2.230s] writing dependency_links to ../build/tourguide_navigation/tourguide_navigation.egg-info/dependency_links.txt
+[2.230s] writing entry points to ../build/tourguide_navigation/tourguide_navigation.egg-info/entry_points.txt
+[2.230s] writing requirements to ../build/tourguide_navigation/tourguide_navigation.egg-info/requires.txt
+[2.231s] writing top-level names to ../build/tourguide_navigation/tourguide_navigation.egg-info/top_level.txt
+[2.231s] writing manifest file '../build/tourguide_navigation/tourguide_navigation.egg-info/SOURCES.txt'
+[2.294s] reading manifest file '../build/tourguide_navigation/tourguide_navigation.egg-info/SOURCES.txt'
+[2.295s] writing manifest file '../build/tourguide_navigation/tourguide_navigation.egg-info/SOURCES.txt'
+[2.295s] running build
+[2.295s] running build_py
+[2.295s] creating /home/husarion/Desktop/tourguide/src/build/tourguide_navigation/build
+[2.295s] creating /home/husarion/Desktop/tourguide/src/build/tourguide_navigation/build/lib
+[2.295s] creating /home/husarion/Desktop/tourguide/src/build/tourguide_navigation/build/lib/tourguide_navigation
+[2.296s] copying tourguide_navigation/__init__.py -> /home/husarion/Desktop/tourguide/src/build/tourguide_navigation/build/lib/tourguide_navigation
+[2.296s] copying tourguide_navigation/ros2_nav_bridge.py -> /home/husarion/Desktop/tourguide/src/build/tourguide_navigation/build/lib/tourguide_navigation
+[2.298s] copying tourguide_navigation/apriltag_http_server.py -> /home/husarion/Desktop/tourguide/src/build/tourguide_navigation/build/lib/tourguide_navigation
+[2.299s] running install
+[2.310s] running install_lib
+[2.342s] creating /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation
+[2.342s] copying /home/husarion/Desktop/tourguide/src/build/tourguide_navigation/build/lib/tourguide_navigation/__init__.py -> /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation
+[2.343s] copying /home/husarion/Desktop/tourguide/src/build/tourguide_navigation/build/lib/tourguide_navigation/ros2_nav_bridge.py -> /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation
+[2.343s] copying /home/husarion/Desktop/tourguide/src/build/tourguide_navigation/build/lib/tourguide_navigation/apriltag_http_server.py -> /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation
+[2.345s] byte-compiling /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation/__init__.py to __init__.cpython-312.pyc
+[2.345s] byte-compiling /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation/ros2_nav_bridge.py to ros2_nav_bridge.cpython-312.pyc
+[2.352s] byte-compiling /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation/apriltag_http_server.py to apriltag_http_server.cpython-312.pyc
+[2.354s] running install_data
+[2.355s] creating /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/share/ament_index
+[2.355s] creating /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/share/ament_index/resource_index
+[2.355s] creating /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/share/ament_index/resource_index/packages
+[2.355s] copying resource/tourguide_navigation -> /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/share/ament_index/resource_index/packages
+[2.355s] copying package.xml -> /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/share/tourguide_navigation
+[2.355s] running install_egg_info
+[2.390s] Copying ../build/tourguide_navigation/tourguide_navigation.egg-info to /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation-0.0.0-py3.12.egg-info
+[2.391s] running install_scripts
+[2.648s] Installing apriltag_http_server script to /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/lib/tourguide_navigation
+[2.648s] Installing ros2_nav_bridge script to /home/husarion/Desktop/tourguide/src/install/tourguide_navigation/lib/tourguide_navigation
+[2.649s] writing list of installed files to '/home/husarion/Desktop/tourguide/src/build/tourguide_navigation/install.log'
+[2.736s] Invoked command in '/home/husarion/Desktop/tourguide/src/tourguide_navigation' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/src/build/tourguide_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/src/install/tourguide_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/tourguide_navigation build --build-base /home/husarion/Desktop/tourguide/src/build/tourguide_navigation/build install --record /home/husarion/Desktop/tourguide/src/build/tourguide_navigation/install.log --single-version-externally-managed install_data

@@ -1,0 +1,25 @@
+[1.487s] Invoking command in '/home/husarion/Desktop/tourguide/src/tourguide_navigation': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/build/tourguide_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tourguide_navigation build --build-base /home/husarion/Desktop/tourguide/build/tourguide_navigation/build install --record /home/husarion/Desktop/tourguide/build/tourguide_navigation/install.log --single-version-externally-managed install_data
+[1.925s] running egg_info
+[1.965s] writing ../../build/tourguide_navigation/tourguide_navigation.egg-info/PKG-INFO
+[1.965s] writing dependency_links to ../../build/tourguide_navigation/tourguide_navigation.egg-info/dependency_links.txt
+[1.967s] writing entry points to ../../build/tourguide_navigation/tourguide_navigation.egg-info/entry_points.txt
+[1.968s] writing requirements to ../../build/tourguide_navigation/tourguide_navigation.egg-info/requires.txt
+[1.968s] writing top-level names to ../../build/tourguide_navigation/tourguide_navigation.egg-info/top_level.txt
+[2.032s] reading manifest file '../../build/tourguide_navigation/tourguide_navigation.egg-info/SOURCES.txt'
+[2.033s] writing manifest file '../../build/tourguide_navigation/tourguide_navigation.egg-info/SOURCES.txt'
+[2.034s] running build
+[2.034s] running build_py
+[2.034s] copying tourguide_navigation/apriltag_http_server.py -> /home/husarion/Desktop/tourguide/build/tourguide_navigation/build/lib/tourguide_navigation
+[2.034s] running install
+[2.044s] running install_lib
+[2.089s] copying /home/husarion/Desktop/tourguide/build/tourguide_navigation/build/lib/tourguide_navigation/apriltag_http_server.py -> /home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation
+[2.090s] byte-compiling /home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation/apriltag_http_server.py to apriltag_http_server.cpython-312.pyc
+[2.095s] running install_data
+[2.097s] running install_egg_info
+[2.149s] removing '/home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation-0.0.0-py3.12.egg-info' (and everything under it)
+[2.149s] Copying ../../build/tourguide_navigation/tourguide_navigation.egg-info to /home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation-0.0.0-py3.12.egg-info
+[2.153s] running install_scripts
+[2.400s] Installing apriltag_http_server script to /home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/tourguide_navigation
+[2.400s] Installing ros2_nav_bridge script to /home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/tourguide_navigation
+[2.403s] writing list of installed files to '/home/husarion/Desktop/tourguide/build/tourguide_navigation/install.log'
+[2.503s] Invoked command in '/home/husarion/Desktop/tourguide/src/tourguide_navigation' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/build/tourguide_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tourguide_navigation build --build-base /home/husarion/Desktop/tourguide/build/tourguide_navigation/build install --record /home/husarion/Desktop/tourguide/build/tourguide_navigation/install.log --single-version-externally-managed install_data

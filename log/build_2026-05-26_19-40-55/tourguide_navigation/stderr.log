@@ -1,0 +1,5 @@
+  File "/home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation/apriltag_http_server.py", line 314
+    global DEBOUNCE_S, COOLDOWN_S
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: name 'DEBOUNCE_S' is used prior to global declaration
+

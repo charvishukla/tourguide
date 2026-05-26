@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: tourguide-navigation
+Version: 0.0.0
+Summary: Extra nagvigation code
+Maintainer: husarion
+Maintainer-email: cshukla@ucsd.edu
+License: Apache-2.0
+Provides-Extra: test

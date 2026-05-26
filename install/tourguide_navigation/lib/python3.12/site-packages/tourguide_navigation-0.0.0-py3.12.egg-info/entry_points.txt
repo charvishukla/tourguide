@@ -1,0 +1,3 @@
+[console_scripts]
+apriltag_http_server = tourguide_navigation.apriltag_http_server:main
+ros2_nav_bridge = tourguide_navigation.ros2_nav_bridge:main

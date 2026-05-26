@@ -1,0 +1,30 @@
+[1.658s] Invoking command in '/home/husarion/Desktop/tourguide/src/tourguide_navigation': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/build/tourguide_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tourguide_navigation build --build-base /home/husarion/Desktop/tourguide/build/tourguide_navigation/build install --record /home/husarion/Desktop/tourguide/build/tourguide_navigation/install.log --single-version-externally-managed install_data
+[2.144s] running egg_info
+[2.177s] writing ../../build/tourguide_navigation/tourguide_navigation.egg-info/PKG-INFO
+[2.177s] writing dependency_links to ../../build/tourguide_navigation/tourguide_navigation.egg-info/dependency_links.txt
+[2.181s] writing entry points to ../../build/tourguide_navigation/tourguide_navigation.egg-info/entry_points.txt
+[2.183s] writing requirements to ../../build/tourguide_navigation/tourguide_navigation.egg-info/requires.txt
+[2.184s] writing top-level names to ../../build/tourguide_navigation/tourguide_navigation.egg-info/top_level.txt
+[2.258s] reading manifest file '../../build/tourguide_navigation/tourguide_navigation.egg-info/SOURCES.txt'
+[2.260s] writing manifest file '../../build/tourguide_navigation/tourguide_navigation.egg-info/SOURCES.txt'
+[2.261s] running build
+[2.261s] running build_py
+[2.261s] copying tourguide_navigation/apriltag_http_server.py -> /home/husarion/Desktop/tourguide/build/tourguide_navigation/build/lib/tourguide_navigation
+[2.262s] running install
+[2.276s] running install_lib
+[2.311s] copying /home/husarion/Desktop/tourguide/build/tourguide_navigation/build/lib/tourguide_navigation/apriltag_http_server.py -> /home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation
+[2.312s] byte-compiling /home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation/apriltag_http_server.py to apriltag_http_server.cpython-312.pyc
+[2.315s]   File "/home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation/apriltag_http_server.py", line 314
+[2.315s]     global DEBOUNCE_S, COOLDOWN_S
+[2.315s]     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2.315s] SyntaxError: name 'DEBOUNCE_S' is used prior to global declaration
+[2.315s] 
+[2.315s] running install_data
+[2.315s] running install_egg_info
+[2.348s] removing '/home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation-0.0.0-py3.12.egg-info' (and everything under it)
+[2.348s] Copying ../../build/tourguide_navigation/tourguide_navigation.egg-info to /home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/python3.12/site-packages/tourguide_navigation-0.0.0-py3.12.egg-info
+[2.350s] running install_scripts
+[2.569s] Installing apriltag_http_server script to /home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/tourguide_navigation
+[2.569s] Installing ros2_nav_bridge script to /home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/tourguide_navigation
+[2.570s] writing list of installed files to '/home/husarion/Desktop/tourguide/build/tourguide_navigation/install.log'
+[2.654s] Invoked command in '/home/husarion/Desktop/tourguide/src/tourguide_navigation' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/husarion/Desktop/tourguide/build/tourguide_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/husarion/Desktop/tourguide/install/tourguide_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tourguide_navigation build --build-base /home/husarion/Desktop/tourguide/build/tourguide_navigation/build install --record /home/husarion/Desktop/tourguide/build/tourguide_navigation/install.log --single-version-externally-managed install_data
