@@ -269,6 +269,9 @@ class _AprilTagHTTPServer(HTTPServer):
 # ------------------------------------------------------------------ #
 
 def main() -> None:
+    # Declare globals first — Python requires this before any use of the name
+    global DEBOUNCE_S, COOLDOWN_S
+
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s %(levelname)s %(name)s: %(message)s",
@@ -311,7 +314,6 @@ def main() -> None:
     args = parser.parse_args()
 
     # Apply CLI overrides to module-level constants used by the node
-    global DEBOUNCE_S, COOLDOWN_S
     DEBOUNCE_S = args.debounce
     COOLDOWN_S = args.cooldown
 
