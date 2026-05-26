@@ -24,7 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            "ros2_nav_bridge = tourguide_navigation.ros2_nav_bridge:main"
+            "ros2_nav_bridge = tourguide_navigation.ros2_nav_bridge:main",
+            "apriltag_http_server = tourguide_navigation.apriltag_http_server:main",
         ],
     },
 )

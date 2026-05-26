@@ -1,0 +1,62 @@
+# AprilTag ID → Tour Location Mapping
+#
+# Add or edit entries here to define what Reachy says when a specific
+# AprilTag is detected by the ROSBot camera.
+#
+# tag_id: the integer ID printed on the physical AprilTag (36h11 family)
+# name:   short display name for the location
+# description: one sentence describing the location
+# talking_points: bullet points the LLM uses when presenting this location
+#
+# To test: print tags from https://github.com/AprilRobotics/apriltag-imgs
+# using the tag36h11 family. The file name (e.g. tag36_11_00000.png) gives
+# the tag ID (0 in that example).
+
+apriltag_locations:
+  0:
+    name: "Lobby"
+    description: "The main entrance and reception area of Franklin Antonio Hall."
+    talking_points:
+      - "History of the building and its founding"
+      - "Visitor policies and safety guidelines"
+      - "Overview of today's tour route"
+
+  1:
+    name: "Demo Lab"
+    description: "An interactive robotics demonstration space with hands-on exhibits."
+    talking_points:
+      - "Types of robots on display and their applications"
+      - "How to safely interact with the demo robots"
+      - "Current research projects in the lab"
+
+  2:
+    name: "Professor's Office"
+    description: "Research office area with ongoing robotics and AI projects."
+    talking_points:
+      - "Research being conducted here"
+      - "Notable publications and ongoing projects"
+      - "How to get involved with the research group"
+
+  3:
+    name: "Lab Printer"
+    description: "The main 3D printing area for robotics component fabrication."
+    talking_points:
+      - "Types of parts fabricated here"
+      - "Materials and printing techniques used"
+      - "How 3D printing accelerates robot prototyping"
+
+  4:
+    name: "Cubicles Intersection"
+    description: "The central hub of the lab where graduate students and researchers work."
+    talking_points:
+      - "Who works in this area"
+      - "Types of projects being developed at these desks"
+      - "Collaboration culture in the lab"
+
+  5:
+    name: "NeRF Camera Setup"
+    description: "A dedicated space for capturing Neural Radiance Field (NeRF) reconstructions."
+    talking_points:
+      - "What NeRF is and why it matters for robotics"
+      - "How the camera rig captures 3D scenes"
+      - "Example reconstructions produced here"
